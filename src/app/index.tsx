@@ -1,5 +1,7 @@
 import { Image, StyleSheet, View, Text } from "react-native";
 
+import { Input } from "../components/input";
+
 export default function Index() {
     return (
         <View style={styles.container}>
@@ -10,6 +12,12 @@ export default function Index() {
 
             <Text style={styles.title}>Entra ai mano,</Text>
             <Text style={styles.subtitle}> Usa o email e senha.</Text>
+
+
+             <View style={styles.form}>
+                 <Input placeholder="Email"/>
+                  <Input placeholder="Senha" secureTextEntry />
+            </View>
         </View>
     )
 }
@@ -36,6 +44,11 @@ const styles = StyleSheet.create({
         fontSize: 16,
         textAlign: "center",
         fontWeight: "900",
-        color: "#black"
+        color: "#black",
+    },
+
+    form: {
+        marginTop: 24,
+        gap: 12,
     }
 });
