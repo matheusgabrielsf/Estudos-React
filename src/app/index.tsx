@@ -1,9 +1,10 @@
-import { Image, StyleSheet, View, Text } from "react-native";
+import { Image, StyleSheet, View, Text, ScrollView } from "react-native";
 
 import { Input } from "../components/input";
 
 export default function Index() {
     return (
+        <ScrollView>
         <View style={styles.container}>
             <Image
                 source={require("../assets/img1.jpg")}
@@ -15,10 +16,11 @@ export default function Index() {
 
 
              <View style={styles.form}>
-                 <Input placeholder="Email"/>
+                 <Input placeholder="Email" keyboardType="email-address"/>
                   <Input placeholder="Senha" secureTextEntry />
             </View>
         </View>
+    </ScrollView>
     )
 }
 
