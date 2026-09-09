@@ -11,7 +11,7 @@ type ButtonProps = TouchableOpacityProps & {
 
     export function Button ({ label, ...rest }: ButtonProps){
         return (
-            <TouchableOpacity style={styles.container} {...rest}>
+            <TouchableOpacity style={styles.container} activeOpacity={0.7} {...rest}>
                 <Text style={styles.label}>{label}</Text>
             </TouchableOpacity>
         )
@@ -19,8 +19,9 @@ type ButtonProps = TouchableOpacityProps & {
 
     const styles = StyleSheet.create({
         container: {
-            width: "100%",
+            width: "90%",
             height: 48,
+            marginHorizontal: 20,
             backgroundColor: "#3366ff",
             alignItems: "center",
             justifyContent: "center",
@@ -32,3 +33,4 @@ type ButtonProps = TouchableOpacityProps & {
                 fontWeight: "600",
             },
     })
+    

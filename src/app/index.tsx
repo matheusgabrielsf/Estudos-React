@@ -1,6 +1,7 @@
 import { Image, StyleSheet, View, Text, ScrollView } from "react-native";
 
 import { Input } from "../components/input";
+import { Button } from "../components/Button";
 
 export default function Index() {
     return (
@@ -18,6 +19,7 @@ export default function Index() {
              <View style={styles.form}>
                  <Input placeholder="Email" keyboardType="email-address"/>
                   <Input placeholder="Senha" secureTextEntry />
+                    <Button label="Entrar" />
             </View>
         </View>
     </ScrollView>
