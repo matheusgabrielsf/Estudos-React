@@ -21,6 +21,7 @@ export default function Index() {
                   <Input placeholder="Senha" secureTextEntry />
                     <Button label="Entrar" />
             </View>
+            <Text style={styles.footerText}>Não tem uma conta? Cadastre-se aqui</Text>   
         </View>
     </ScrollView>
     )
@@ -54,5 +55,10 @@ const styles = StyleSheet.create({
     form: {
         marginTop: 24,
         gap: 12,
-    }
+    },
+    footerText: {
+        textAlign: "center",
+        marginTop: 24,
+        color: "cinza",
+    },
 });
