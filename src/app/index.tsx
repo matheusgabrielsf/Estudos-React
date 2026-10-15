@@ -1,4 +1,6 @@
 import { Image, StyleSheet, View, Text, ScrollView } from "react-native";
+import { Link } from "expo-router";
+
 
 import { Input } from "../components/input";
 import { Button } from "../components/Button";
@@ -21,7 +23,11 @@ export default function Index() {
                   <Input placeholder="Senha" secureTextEntry />
                     <Button label="Entrar" />
             </View>
-            <Text style={styles.footerText}>Não tem uma conta? Cadastre-se aqui</Text>   
+            <Text style={styles.footerText}>Não tem uma conta? {" "}
+                <Link href="/signup" style={styles.footerLink}>
+                Cadastre-se aqui.
+                </Link>
+            </Text>   
         </View>
     </ScrollView>
     )
@@ -59,6 +65,10 @@ const styles = StyleSheet.create({
     footerText: {
         textAlign: "center",
         marginTop: 24,
-        color: "cinza",
+        color: "#585860",
+    },
+    footerLink: {
+        color: "#032ad7",
+        fontWeight: 700,
     },
 });
