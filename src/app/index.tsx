@@ -1,4 +1,4 @@
-import { Image, StyleSheet, View, Text, ScrollView } from "react-native";
+import { Image, StyleSheet, View, Text, ScrollView, KeyboardAvoidingView, Platform } from "react-native";
 import { Link } from "expo-router";
 
 
@@ -7,7 +7,8 @@ import { Button } from "../components/Button";
 
 export default function Index() {
     return (
-        <ScrollView>
+    <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.select({ ios: "padding", android: "height" })}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled">
         <View style={styles.container}>
             <Image
                 source={require("../assets/img1.jpg")}
@@ -29,7 +30,8 @@ export default function Index() {
                 </Link>
             </Text>   
         </View>
-    </ScrollView>
+        </ScrollView>
+    </KeyboardAvoidingView>
     )
 }
 
