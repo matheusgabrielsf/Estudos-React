@@ -9,8 +9,8 @@ export default function SignUp() {
     return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.select({ ios: "padding", android: "height" })}>
         <ScrollView contentContainerStyle={{ flexGrow: 1 }} 
-        keyboardShouldPersistTaps="handled">
-        showsVerticalScrollIndicator={false}
+        keyboardShouldPersistTaps="handled"
+        showsVerticalScrollIndicator={false}>
         <View style={styles.container}>
             <Image
                 source={require("../assets/img2.jpg")}
